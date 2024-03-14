@@ -1,0 +1,396 @@
+﻿@using Banhang.Models
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="~/front/images/anh/image/LOGO-1-2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/front/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/lib/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/lib/select2/css/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/lib/jquery.bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/lib/owl.carousel/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/lib/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/lib/fancyBox/source/jquery.fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/css/green.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/css/style_frm_dkdn.css" />
+    <link rel="stylesheet" type="text/css" href="~/front/css/aboutus.css" />
+    <link rel="stylesheet" href="~/front/css/switcher.css">
+    <title>HavarShop - @ViewBag.title </title>
+</head>
+
+<body class="green">
+    <!-- HEADER -->
+    <div id="header" class="header">
+
+        <!-- MAIN HEADER -->
+        <div class="container main-header">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 logo">
+                    <a href="/Home/Index"><img alt="Eco Shop" src="~/front/images/anh/image/LOGO-1-2.png" /></a>
+                </div>
+                <div class="col-xs-4 col-sm-12 col-md-5 col-lg-4 header-search-box">
+                    <form class="form-inline">
+                        <div class="form-group input-serach">
+                            <input type="text" placeholder="Search ...">
+                        </div>
+                        <button type="submit" class="pull-right btn-search"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 group-button-header">
+                    <a title="cart" href="#" class="btn-compare">Compare</a>
+                    <a title="My wishlist" href="#" class="btn-heart">Heart</a>
+
+                    <div class="btn-cart" id="cart-block">
+                        <a asp-controller="Acces" asp-action="Logout" title="Logout" data-toggle="modal" data-target="#myModal">Logout</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MANIN HEADER -->
+        <div id="nav-top-menu" class="nav-top-menu">
+            <div class="container">
+                <div class="row">
+                    <div id="main-menu" class="col-sm-12 main-menu">
+                        <nav class="navbar navbar-btn">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+                                    <a class="navbar-default" href="#">MENU</a>
+                                </div>
+                                <div id="navbar" class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li class="active"><a href="/Home/Index"><span class="fa fa-home"></span> Trang Chủ</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản Phẩm</a>
+                                            @*@Html.Action("menu_victice")*@
+                                        </li>
+                                        <!--<li><a href="#">Promotion</a></li>-->
+                                        <li><a href="/Home/Gioithieu">Giới Thiệu</a></li>
+                                        <li><a href="/Home/lienhe">Liên Hệ</a></li>
+
+                                        <li style="margin-left:600px;"><a href="/Home/xemcart"><span style="font-size:20px" class="fa fa-cart-plus"></span></a></li>
+
+                                    </ul>
+                                </div>
+                                <!--/.nav-collapse -->
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- userinfo on top-->
+                <div id="form-search-opntop">
+                </div>
+                <!-- userinfo on top-->
+                <div id="user-info-opntop">
+                </div>
+                <!-- CART ICON ON MMENU -->
+                <div id="shopping-cart-box-ontop">
+                    <i class="fa fa-user" data-toggle="modal" data-target="#myModal"></i>
+
+                    <div class="shopping-cart-box-ontop-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- Home slideder-->
+    <div id="home-slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 header-top-right">
+                    <div class="homeslider">
+                        <ul id="contenhomeslider">
+                            <li><img alt="Funky roots" src="~/front/images/anh/image/bgk 8.jpeg" title="Funky roots" /></li>
+                            <li><img alt="Funky roots" src="~/front/images/anh/image/bgk 2.jpg " title="Funky roots" /></li>
+                            <li><img alt="Funky roots" src="~/front/images/anh/image/bgk 33.png" title="Funky roots" /></li>
+                            <li><img alt="Funky roots" src="~/front/images/anh/image/bgk 4.jpg" title="Funky roots" /></li>
+                            <li><img alt="Funky roots" src="~/front/images/anh/image/bgk 8.jpeg" title="Funky roots" /></li>
+                            <li><img alt="Funky roots" src="~/front/images/anh/image/bgk 33.png" title="Funky roots" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Home slideder-->
+    @RenderBody()
+
+
+    <!-- POPUP LOGIN-REGISTER -->
+    
+    <!--EN LOGIN REGISTER-->
+    <!--PEOPLE SAY-->
+
+    <div id="owl-demo-ppsay">
+        <div class="container">
+            <div class="ppsay-title">Ý kiến khách hàng </div>
+            <div id="customer-item-carousel" class="carousel slide hidden-sm hidden-xs" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#customer-item-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#customer-item-carousel" data-slide-to="1"></li>
+                    <li data-target="#customer-item-carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner hidden-sm hidden-xs">
+                    <div class="item active">
+                        <div class="ppsaydiv">
+                            <div class="ppsaycontent hidden-xs col-sm-6 col-md-6">
+                                <div class="ppsayavt col-md-3 col-sm-3">
+                                    <img src="~/front/images/anh/images1/avata.jpg" alt="Ngô Quang Kiệt ">
+                                </div>
+                                <div class="ppsayauthor col-md-9 col-sm-9 ">
+                                    <div class="ppsaycontentcmt ">
+                                        <p style="text-align: justify ">
+                                            <span>“ </span>Một bộ sofa nhập rất chất, tôi rất ưng mẫu sofa thư giãn mua cho gia đình sau mỗi ngày làm việc mệt mỏi. Ngoài yên tâm về chất lượng, tôi thực sự cảm thất hài lòng về mọi dịch vụ. Cảm ơn Sofa Hoàng
+                                            Minh đã tư vấn .<span>”</span>
+                                        </p>
+                                    </div>
+                                    <p><span>Customer:</span> <span class="name ">Ngô Quang Kiệt </span></p>
+                                </div>
+                            </div>
+                            <div class="ppsaycontent col-xs-12 col-sm-6 col-md-6 ">
+                                <div class="ppsayavt col-md-3 col-sm-3 ">
+                                    <img src="~/front/images/anh/images1/avata1.jpg " alt="Hoàng Lan ">
+                                </div>
+                                <div class="ppsayauthor col-md-9 col-sm-9 ">
+                                    <div class="ppsaycontentcmt ">
+                                        <p style="text-align: justify ">
+                                            <span>“ </span>Cảm ơn Nội Thất Hoàng Minh đã giúp tôi chọn được mẫu sofa&nbsp; phù hợp cho căn hộ mới của tôi. Một sản phẩm rất hữu ích, chất lượng sản phẩm tốt khiến tôi cảm thấy an tâm mỗi khi sử dụng.&nbsp;
+                                            <span>”</span>
+                                        </p>
+                                    </div>
+                                    <p><span>Customer:</span> <span class="name ">Hoàng Lan</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="ppsaydiv ">
+                            <div class="ppsaycontent col-xs-12 col-sm-6 col-md-6 ">
+                                <div class="ppsayavt col-md-3 col-sm-3 ">
+                                    <img src="~/front/images/parallax-content2-2.png " alt="Minh Tuấn ">
+                                </div>
+                                <div class="ppsayauthor col-md-9 col-sm-9 ">
+                                    <div class="ppsaycontentcmt ">
+                                        <p style="text-align: justify ">
+                                            <span>“ </span> Cảm thấy hài lòng với bộ sản phẩm nội thất Sofa nhập khẩu - Bàn ăn mua tại Nội Thất Hoàng Minh . Bỏ ra một số tiền không nhỏ, cũng phải đắn đo mãi, nhưng nhờ sự tư vấn nhiệt tình bên Hoàng Minh tôi
+                                            cũng quết định sắm nội thất trọn bộ cho không gian nhà mới.&nbsp;<span>”</span>
+                                        </p>
+                                    </div>
+                                    <p><span>Customer:</span> <span class="name ">Minh Tuấn</span></p>
+                                </div>
+                            </div>
+                            <div class="ppsaycontent col-xs-12 col-sm-6 col-md-6 ">
+                                <div class="ppsayavt col-md-3 col-sm-3 ">
+                                    <img src="~/front/images/parallax-content.png " alt="Ms. Thu Phan ">
+                                </div>
+                                <div class="ppsayauthor col-md-9 col-sm-9 ">
+                                    <div class="ppsaycontentcmt ">
+                                        <p>
+                                            <span style="text-align: justify ">“ </span> Một bộ sofa nhập rất chất, tôi rất ưng mẫu sofa thư giãn mua cho gia đình sau mỗi ngày làm việc mệt mỏi. Ngoài yên tâm về chất lượng, tôi thực sự cảm thất hài lòng về
+                                            mọi dịch vụ. Cảm ơn Sofa Hoàng Minh đã tư vấn .<span>”</span>
+                                        </p>
+                                    </div>
+                                    <p><span>Customer:</span> <span class="name ">Ms.Thu Phan</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="ppsaydiv ">
+                            <div class="ppsaycontent col-xs-12 col-sm-6 col-md-6 ">
+                                <div class="ppsayavt col-md-3 col-sm-3 ">
+                                    <img src="~/front/images/parallax-content-2.png " alt="Ms. Hoang Tran ">
+                                </div>
+                                <div class="ppsayauthor col-md-9 col-sm-9 ">
+                                    <div class="ppsaycontentcmt ">
+                                        <p style="text-align: justify ">
+                                            <span>“ </span>Cảm thấy hài lòng với bộ sản phẩm nội thất Sofa nhập khẩu - Bàn ăn mua tại Nội Thất Hoàng Minh . Bỏ ra một số tiền không nhỏ, cũng phải đắn đo mãi, nhưng nhờ sự tư vấn nhiệt tình bên Hoàng Minh tôi
+                                            cũng quết định sắm nội thất trọn bộ cho không gian nhà mới.&nbsp;<span>”</span>
+                                        </p>
+                                    </div>
+                                    <p><span>Customer:</span> <span class="name ">Ms. Hoang Tran</span></p>
+                                </div>
+                            </div>
+                            <div class="ppsaycontent col-xs-12 col-sm-6 col-md-6 ">
+                                <div class="ppsayavt col-md-3 col-sm-3 ">
+                                    <img src="~/front/images/parallax-content-1.png " alt="Ms. Trang Le ">
+                                </div>
+                                <div class="ppsayauthor col-md-9 col-sm-9 ">
+                                    <div class="ppsaycontentcmt ">
+                                        <p style="text-align: justify ">
+                                            <span>“ </span>Một bộ sofa nhập rất chất, tôi rất ưng mẫu sofa thư giãn mua cho gia đình sau mỗi ngày làm việc mệt mỏi. Ngoài yên tâm về chất lượng, tôi thực sự cảm thất hài lòng về mọi dịch vụ. Cảm ơn Sofa Hoàng
+                                            Minh đã tư vấn .<span>”</span>
+                                        </p>
+                                    </div>
+                                    <p><span>Customer:</span> <span class="name ">Trang Le</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="customer-item-carousel " class="carousel slide hidden-md hidden-lg " data-ride="carousel ">
+                <ol class="carousel-indicators ">
+                    <li data-target="#customer-item-carousel " data-slide-to="0 " class="active "></li>
+                    <li data-target="#customer-item-carousel " data-slide-to="1 "></li>
+                    <li data-target="#customer-item-carousel " data-slide-to="2 "></li>
+                    <li data-target="#customer-item-carousel " data-slide-to="3 "></li>
+                    <li data-target="#customer-item-carousel " data-slide-to="4 "></li>
+                    <li data-target="#customer-item-carousel " data-slide-to="5 "></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!--END PEOPLE SAY-->
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <!-- introduce-box -->
+            <div id="introduce-box " class="row ">
+                <br>
+                <br>
+                <div class="col-md-3 ">
+                    <div id="address-box ">
+                        <a href="# "><img src="~/front/images/anh/image/LOGO-1-2.png" alt="logo " /></a>
+                        <br>
+                        <div id="address-list ">
+                            <br>
+                            <div class="tit-name ">Địa chỉ:</div>
+                            <div class="tit-contain ">135, Tiểu Khu Bệnh viện,TTNT,Mộc Châu, Sơn La.</div>
+                            <div class="tit-name ">Phone:</div>
+                            <div class="tit-contain ">0868294190</div>
+                            <div class="tit-name ">Email:</div>
+                            <div class="tit-contain ">havarhop@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="row ">
+                        <div class="col-sm-6 ">
+                            <div class="introduce-title ">Chăm sóc khách hàng</div>
+                            <ul id="introduce-support " class="introduce-list ">
+                                <li> Thứ 2 - Thứ 6: 7 giờ sáng - 8 giờ tối </li>
+                                <li>T7 & CN: 7 giờ sáng - 6 giờ chiều</li>
+                                <li><a href="policy-faq.html ">về chúng tôi</a></li>
+                                <li><a href="policy-faq.html ">Về tiêu chí</a></li>
+                                <li><a href="policy-faq.html ">Mua hàng đảm bảo</a></li>
+                        </div>
+                        <div class="col-sm-6 ">
+                            <div class="introduce-title ">Chính sách</div>
+                            <ul id="introduce-Account " class="introduce-list ">
+                                <li><a href="policy-faq.html ">Chính sách bảo hành</a></li>
+                                <li><a href="policy-faq.html ">Chính sách bảo mật</a></li>
+                                <li><a href="policy-faq.html ">Chính sách bán hàng</a></li>
+                                <li><a href="policy-faq.html ">Đổi trả sản phẩm</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 ">
+                    <div id="contact-box ">
+                        <div class="introduce-title ">Hỗ trợ và Tư vấn</div>
+                        <div class="input-group " id="mail-box ">
+                            <input type="text " placeholder="Your email address " />
+                            <span class="input-group-btn ">
+                                <button class="btn btn-default " type="button ">OK</button>
+                            </span>
+                        </div>
+                        <!-- /input-group -->
+                        <div class="introduce-title ">Follow Us</div>
+                        <!--<div class="social-link ">-->
+                        <!--<a href="# "><i class="fa fa-facebook "></i></a>-->
+                        <!--<a href="# "><i class="fa fa-pinterest-p "></i></a>-->
+                        <!--<a href="# "><i class="fa fa-google-plus "></i></a>-->
+                        <!--<a href="# "><i class="fa fa-youtube "></i></a>-->
+                        <!--</div>-->
+                        <div class="social-link ">
+                            <ul class="social-icons ">
+                                <li>
+                                    <a class="rss " data-original-title="rss " href="# "></a>
+                                </li>
+                                <li>
+                                    <a class="facebook " data-original-title="facebook " href="# "></a>
+                                </li>
+                                <li>
+                                    <a class="twitter " data-original-title="twitter " href="# "></a>
+                                </li>
+                                <li>
+                                    <a class="googleplus " data-original-title="googleplus " href="# "></a>
+                                </li>
+                                <li>
+                                    <a class="linkedin " data-original-title="linkedin " href="# "></a>
+                                </li>
+                                <li>
+                                    <a class="youtube " data-original-title="youtube " href="# "></a>
+                                </li>
+                                <li>
+                                    <a class="vimeo " data-original-title="vimeo " href="# "></a>
+                                </li>
+                                <li>
+                                    <a class="skype " data-original-title="skype " href="# "></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /#introduce-box -->
+
+
+            <div id="footer-menu-box ">
+                <p class="text-center ">ĐỖ ĐÌNH NAM &#169; 2022 HavarShop.</p>
+            </div>
+            <!-- /#footer-menu-box -->
+        </div>
+    </footer>
+
+    <a href="# " class="scroll_top " title="Scroll to Top " style="display: inline; ">Scroll</a>
+    <!-- Script-->
+
+    <script type="text/javascript " src="~/front/lib/jquery/jquery-1.11.2.min.js "></script>
+    <script type="text/javascript " src="~/front/lib/jquery-migrate.min.js "></script>
+    <script type="text/javascript " src="~/front/lib/fancyBox/source/jquery.fancybox.pack.js "></script>
+    <script type="text/javascript " src="~/front/lib/bootstrap/js/bootstrap.min.js "></script>
+    <script type="text/javascript " src="~/front/lib/select2/js/select2.min.js "></script>
+    <script type="text/javascript " src="~/front/lib/jquery.bxslider/jquery.bxslider.min.js "></script>
+    <script type="text/javascript " src="~/front/lib/owl.carousel/owl.carousel.min.js "></script>
+
+
+
+    <script type="text/javascript " src="~/front/js/jquery.actual.min.js "></script>
+    <script type="text/javascript " src="~/front/js/theme-script.js "></script>
+    @*<script type="text/javascript " src="~/front/js/shoppingCart.js "></script>*@
+
+    <script type="text/javascript " src="~/front/js/layout.js "></script>
+    <script type="text/javascript ">
+        jQuery(document).ready(function() {
+        Layout.init();
+        Layout.initOWL();
+        Layout.initTwitter();
+         Layout.initImageZoom();
+         Layout.initTouchspin();
+         Layout.initUniform();
+        Layout.initSliderRange();
+        });
+
+    </script>
+    <script src="~~/front/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~~/front/mustache/mustache.js"></script>
+    <script src="~~/front/numeral/numeral.js"></script>
+    @RenderSection("scripts", false)
+</body>
+
+</html>

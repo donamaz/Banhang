@@ -1,0 +1,319 @@
+﻿@model List<SanPham>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="content-page">
+    <div class="container">
+        <!-- featured category  -->
+        <div class="category-featured Vegetables">
+            <nav class="navbar nav-menu show-brand">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-brand">
+                        <a href="#"> <img alt="fashion" src="~/front/images/icon_like.png" /> Được yêu thích</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse">
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+
+            </nav>
+            <div class="product-featured clearfix">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="box-right">
+                            <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                            <ul class="product-list">
+                                @foreach (var sp in Model)
+                                {
+                                    <li class="col-sm-4 product-item">
+                                        <div class="left-block">
+                                            <a><img class="img-responsive" alt="product" src="~/front/images/anh/image/@sp.Anh" /></a>
+
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" href="~/front/images/anh/image/@sp.Anh" class="search fancybox-button"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a class="add-item-to-cart" title="Add to Cart" href="/Home/AddCart/@sp.Id" data-name="bàn trang điểm" data-price="4,000,000" data-image="bantrangdiem1" data-product-code="WN982">Add to Cart</a>
+                                            </div>
+                                            <div class="bestseller"></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="/Home/sanphamdetail/@sp.Id">@sp.Tensp</a></h5>
+
+                                            <div class="content_price">
+                                                <span class="price product-price"><span style="color: black">Price:</span> @string.Format("{0:#,##0}", sp.Gia) đ</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end featured category -->
+
+
+        <div class="category-featured Vegetables">
+            <nav class="navbar nav-menu show-brand">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-brand">
+                        <a href="#"> <img alt="fashion" src="~/front/images/icon_paper-plane.png" /> Sản phẩm mới </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse">
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+
+            </nav>
+            <div class="product-featured clearfix">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="box-right">
+                            <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                            <ul class="product-list">
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product" src="~/front/images/anh/image/bantrangdiem2.png" /></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" href="~/front/images/anh/image/bantrangdiem2.png" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Bàn trang điểm </a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> Liên hệ</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product" src="~/front/images/anh/image/donghotreotuong.jpg" /></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" href="~/front/images/anh/image/donghotreotuong.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Đồng hồ</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 700,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product" src="~/front/images/anh/images1/sofa-co-dien-1901 (1).jpg" /></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" href="~/front/images/anh/images1/sofa-co-dien-1901 (1).jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Sofa cao cấp</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 63,000,000đ</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product" src="~/front/images/anh/images1/sofa-da-bo-862 (1).jpg" /></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" href="~/front/images/anh/images1/sofa-da-bo-862 (1).jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Sofa nhập khẩu</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 45,000,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product" src="~/front/images/anh/image/ban.jpg" /></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" href="~/front/images/anh/image/ban.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Bàn</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> Liên hệ</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product" src="~/front/images/anh/image/caygia.jpg" /></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" href="~/front/images/anh/image/caygia.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Cây giả</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 126,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product" src="~/front/images/anh/image/caygia1.jpg" /></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" href="~/front/images/anh/image/caygia1.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Cây giả trang trí</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 152,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product" src="~/front/images/anh/image/den.jpg" /></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" href="~/front/images/anh/image/den.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Đèn</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 75,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product" src="~/front/images/anh/image/den1.jpg" /></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" href="~/front/images/anh/image/den1.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Đèn ngủ</a></h5>
+
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> 205,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 product-item">
+                                    <div class="left-block">
+                                        <a><img class="img-responsive" alt="product" src="~/front/images/anh/image/giuong 2.jpg" /></a>
+
+                                        <div class="quick-view">
+                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to compare" class="compare" href="#"></a>
+                                            <a title="Quick view" href="~/front/images/anh/image/giuong 2.jpg" class="search fancybox-button"></a>
+                                        </div>
+                                        <div class="add-to-cart">
+                                            <a class="not-active" title="Add to Cart" readonly="true">Add to Cart</a>
+                                        </div>
+                                        <div class="comingsoon"></div>
+                                    </div>
+                                    <div class="right-block">
+                                        <h5 class="product-name"><a href="#">Giường</a></h5>
+                                        <div class="content_price">
+                                            <span class="price product-price"><span style="color: black">Price:</span> Liên hệ</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end featured category -->
+    </div>
+</div>
