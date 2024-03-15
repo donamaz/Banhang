@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Banhang")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a02adc698cdbf61a1132439767a9889a8cba435")]
 [assembly: System.Reflection.AssemblyProductAttribute("Banhang")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Banhang")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -99,7 +101,7 @@
                     </a>
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="/Admin/Danhmuc">Loại Sản Phẩm</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Admin/Danhmucs">Loại Sản Phẩm</a></li>
                             <li class="nav-item"> <a class="nav-link" href="/AdminCP/Products">Sản Phẩm</a></li>
                             <li class="nav-item"> <a class="nav-link" href="/AdminCP/KhachHangs">Khách Hàng</a></li>
                             <li class="nav-item"> <a class="nav-link" href="/AdminCP/NhanViens">Nhân Viên</a></li>
@@ -301,8 +303,8 @@
                                         </div>
                                     </div>
                                     <div class="preview-item-content">
-                                        <p class="preview-subject mb-1"><a href="@Url.Action("Login", "Acces")">Thoát</a></p>
-                                        
+                                       <p class="preview-subject mb-1">Thoát</p>
+                                     
                                     </div>
                                 </a>
                                 <div class="dropdown-divider"></div>
